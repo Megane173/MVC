@@ -1,5 +1,6 @@
 
 
+
 class Numero:
 
     def __init__(self, numero=" "):
@@ -12,7 +13,21 @@ class Numero:
         self.numero=numero
 
 
-    def validar_numero(self):
+    def es_par(self):
+        msg="• "
+
+        if(self.numero==" "):
+            msg="No digito ningun numero"
+            return msg       
+
+        if(self.numero%2==0):
+            msg+="Es par"
+        else:
+            msg+="Es impar"
+
+        return msg
+    
+    def es_positivo(self):
         msg="• "
 
         if(self.numero==" "):
@@ -20,16 +35,10 @@ class Numero:
             return msg
         
         if(self.numero>0):
-            msg+="El numero es mayor a cero"
+            msg+="El numero es positivo"
         elif(self.numero<0):
-            msg+="El numero es menor a cero"
+            msg+="El numero es negativo"
         else:
             msg+="El numero es igual a cero (es neutro)"
         
-
-        if(self.numero%2==0):
-            msg+=" y es par"
-        else:
-            msg+=" y es impar"
-
         return msg
