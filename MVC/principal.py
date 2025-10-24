@@ -8,8 +8,7 @@ obj_vista=Vista()
 obj_modelo=Numero()
 obj_controlador=Controlador(obj_modelo, obj_vista)
 
-obj_controlador.construir_pregunta()
-obj_controlador.validar_numero()
+obj_controlador.mostrar_menu()
 
 """""
 #Paso 5
